@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shff/parcel-plugin-inliner.git"
+    "url": "git+https://github.com/laurent-d/parcel-plugin-inliner.git"
   },
   "author": "Silvio Henrique Ferreira <shferreira@me.com>",
   "license": "MIT",
