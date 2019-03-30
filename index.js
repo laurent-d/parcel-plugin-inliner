@@ -12,7 +12,7 @@ module.exports = bundler => {
       const data = fs.readFileSync(bundle.name);
       const result = await postHTML([posthtmlInlineAssets({
         cwd,
-        errors: 'throw'
+        errors: 'ignore'
       })]).process(data);
       fs.writeFileSync(bundle.name, result.html);
     }));
