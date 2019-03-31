@@ -15,7 +15,7 @@ module.exports = bundler => {
           script: {
             resolve(node) {
               // transform <script src="file.js"> but not <script src="file.js" type>
-              return node.tag === 'script' && node.attrs && !node.attrs.type && node.attrs.src;
+              return node.tag === 'script' && !node.attrs;
             }
           }
         }
