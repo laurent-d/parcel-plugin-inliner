@@ -12,13 +12,9 @@ module.exports = bundler => {
       const data = fs.readFileSync(bundle.name);
       const result = await postHTML([posthtmlInlineAssets({
         transforms: {
-          script: {
-            resolve(node) {
-              // transform <script src="file.js"> but not <script src="file.js" type>
-              return node.tag === 'script' && !node.attrs;
-            }
-          }
-        }
+          // any non-object will work
+          script: false
+        },
         cwd,
         errors: 'ignore',
       })]).process(data);
