@@ -12,7 +12,6 @@ module.exports = bundler => {
       const data = fs.readFileSync(bundle.name);
       const result = await postHTML([posthtmlInlineAssets({
         transforms: {
-          // any non-object will work
           script: false
         },
         cwd,
